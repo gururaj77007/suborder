@@ -16,6 +16,9 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/api/products', productRoutes);
+app.get('/health', (req, res) => {
+  res.status(200).json({ message: 'Server is up and running!' });
+});
 
 // Sample descriptions
 
